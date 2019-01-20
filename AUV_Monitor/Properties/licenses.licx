@@ -1,0 +1,9 @@
+Iocomp.Instrumentation.Professional.MatrixLeds, Iocomp.Instrumentation.WF40.Pro, Version=4.0.4.13285, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Professional.Compass, Iocomp.Instrumentation.WF40.Pro, Version=4.0.4.13285, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Standard.ModeComboBox, Iocomp.Instrumentation.WF40.Std, Version=4.0.4.13287, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Standard.DisplayDouble, Iocomp.Instrumentation.WF40.Std, Version=4.0.4.13287, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Professional.Motor, Iocomp.Instrumentation.WF40.Pro, Version=4.0.4.13285, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Professional.ClockAnalog, Iocomp.Instrumentation.WF40.Pro, Version=4.0.4.13285, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Professional.SlidingCompass, Iocomp.Instrumentation.WF40.Pro, Version=4.0.4.13285, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Standard.Led, Iocomp.Instrumentation.WF40.Std, Version=4.0.4.13287, Culture=neutral, PublicKeyToken=096a9279a87304f1
+Iocomp.Instrumentation.Standard.Knob, Iocomp.Instrumentation.WF40.Std, Version=4.0.4.13287, Culture=neutral, PublicKeyToken=096a9279a87304f1
