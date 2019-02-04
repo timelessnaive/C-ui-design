@@ -39,6 +39,8 @@
             this.quickView2 = new MissionPlanner.Controls.QuickView();
             this.quickView3 = new MissionPlanner.Controls.QuickView();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
+            this.userControl12 = new AUV_Monitor.UserControl1();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -57,8 +59,6 @@
             this.TabPageSetting = new CCWin.SkinControl.SkinTabPage();
             this.TabPageInfo = new CCWin.SkinControl.SkinTabPage();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.userControl12 = new AUV_Monitor.UserControl1();
             this.TabMain.SuspendLayout();
             this.TabPageIndex.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -167,7 +167,7 @@
             this.quickView1.Location = new System.Drawing.Point(20, 276);
             this.quickView1.Margin = new System.Windows.Forms.Padding(2);
             this.quickView1.Name = "quickView1";
-            this.quickView1.number = 5D;
+            this.quickView1.number = 0D;
             this.quickView1.numberColor = System.Drawing.Color.Aqua;
             this.quickView1.numberformat = "0.00";
             this.quickView1.Size = new System.Drawing.Size(117, 50);
@@ -195,7 +195,7 @@
             this.quickView3.Location = new System.Drawing.Point(150, 276);
             this.quickView3.Margin = new System.Windows.Forms.Padding(2);
             this.quickView3.Name = "quickView3";
-            this.quickView3.number = 3.2D;
+            this.quickView3.number = 0D;
             this.quickView3.numberColor = System.Drawing.Color.BlueViolet;
             this.quickView3.numberformat = "0.00";
             this.quickView3.Size = new System.Drawing.Size(109, 50);
@@ -209,6 +209,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(568, 384);
             this.panel2.TabIndex = 12;
+            // 
+            // elementHost2
+            // 
+            this.elementHost2.Location = new System.Drawing.Point(0, 3);
+            this.elementHost2.Name = "elementHost2";
+            this.elementHost2.Size = new System.Drawing.Size(561, 377);
+            this.elementHost2.TabIndex = 0;
+            this.elementHost2.Text = "elementHost2";
+            this.elementHost2.Child = this.userControl12;
             // 
             // panel1
             // 
@@ -853,10 +862,10 @@
             this.tabPage2.Controls.Add(this.btnOpenCom);
             this.tabPage2.Controls.Add(this.cbxBaudRate);
             this.tabPage2.Controls.Add(this.cbxCOMPort);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(867, 183);
+            this.tabPage2.Size = new System.Drawing.Size(867, 176);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "状态";
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
@@ -937,7 +946,7 @@
             // 
             this.zedGraphControl1.BackColor = System.Drawing.Color.Black;
             this.zedGraphControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.zedGraphControl1.Location = new System.Drawing.Point(54, 29);
+            this.zedGraphControl1.Location = new System.Drawing.Point(72, 41);
             this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(4);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollGrace = 0D;
@@ -985,15 +994,6 @@
             // serialPort1
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
-            // 
-            // elementHost2
-            // 
-            this.elementHost2.Location = new System.Drawing.Point(0, 3);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(561, 377);
-            this.elementHost2.TabIndex = 0;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.userControl12;
             // 
             // FrmMain
             // 
@@ -1053,8 +1053,8 @@
         private System.Windows.Forms.Button btnOpenCom;
         private System.Windows.Forms.ComboBox cbxBaudRate;
         private System.Windows.Forms.ComboBox cbxCOMPort;
-        private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.TextBox textBox1;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }
 

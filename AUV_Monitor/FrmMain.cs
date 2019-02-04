@@ -22,18 +22,20 @@ namespace AUV_Monitor
             InitializeComponent();
         }
 
+        //001
         private void TabMain_SelectedIndexChanged(object sender, EventArgs e)
         {
             
         }
 
-
+        //002
         private void hsi1_Load(object sender, EventArgs e)
         {
 
         }
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
+            //控制水平仪
             try
             {
                 int count = serialPort1.BytesToRead;
@@ -64,12 +66,13 @@ namespace AUV_Monitor
             }
             catch (System.Exception ex)
             {
-                //MessageBox.Show("Error:" + ex.Message, "Error");
+                MessageBox.Show("Error:" + ex.Message, "Error");
             }
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
+            //整个窗体加载时检查是否有串口
             //serialPort1.DataReceived += serialPort1_DataReceived;
             cbxBaudRate.SelectedIndex = 5;
            
@@ -97,12 +100,12 @@ namespace AUV_Monitor
             //userControl12.slider_Copy.Value = 50;
             //userControl12.slider_Copy1.Value = 50;
         }
-
+        //003
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
         }
-
+        //004
         private void cbxBaudRate_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -110,6 +113,7 @@ namespace AUV_Monitor
 
         private void btnOpenCom_Click(object sender, EventArgs e)
         {
+            //打开串口按钮绑定的函数
             if (btnOpenCom.Text == "打开串口")
             {
                 try
