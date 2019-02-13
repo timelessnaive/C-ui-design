@@ -45,9 +45,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.aGauge2 = new AGaugeApp.AGauge();
+            this.aGauge3 = new AGaugeApp.AGauge();
             this.aGauge1 = new AGaugeApp.AGauge();
             this.hsi1 = new MissionPlanner.Controls.HSI();
-            this.aGauge3 = new AGaugeApp.AGauge();
             this.aGauge4 = new AGaugeApp.AGauge();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -98,7 +98,7 @@
             this.TabMain.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Bottom;
             this.TabMain.PageNorml = null;
             this.TabMain.PageNormlTxtColor = System.Drawing.Color.White;
-            this.TabMain.SelectedIndex = 0;
+            this.TabMain.SelectedIndex = 1;
             this.TabMain.Size = new System.Drawing.Size(892, 702);
             this.TabMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabMain.TabIndex = 0;
@@ -212,7 +212,8 @@
             // 
             // elementHost2
             // 
-            this.elementHost2.Location = new System.Drawing.Point(0, 3);
+            this.elementHost2.BackColor = System.Drawing.Color.Black;
+            this.elementHost2.Location = new System.Drawing.Point(-2, 0);
             this.elementHost2.Name = "elementHost2";
             this.elementHost2.Size = new System.Drawing.Size(561, 377);
             this.elementHost2.TabIndex = 0;
@@ -238,14 +239,15 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(875, 209);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.Click += new System.EventHandler(this.TabControl1_Click);
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Black;
             this.tabPage1.Controls.Add(this.aGauge2);
+            this.tabPage1.Controls.Add(this.aGauge3);
             this.tabPage1.Controls.Add(this.aGauge1);
             this.tabPage1.Controls.Add(this.hsi1);
-            this.tabPage1.Controls.Add(this.aGauge3);
             this.tabPage1.Controls.Add(this.aGauge4);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
@@ -400,6 +402,154 @@
             this.aGauge2.Value2 = 0F;
             this.aGauge2.Value3 = 0F;
             // 
+            // aGauge3
+            // 
+            this.aGauge3.BackColor = System.Drawing.Color.Transparent;
+            this.aGauge3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.aGauge3.BaseArcColor = System.Drawing.Color.White;
+            this.aGauge3.BaseArcRadius = 60;
+            this.aGauge3.BaseArcStart = 135;
+            this.aGauge3.BaseArcSweep = 270;
+            this.aGauge3.BaseArcWidth = 2;
+            this.aGauge3.Cap_Idx = ((byte)(1));
+            this.aGauge3.CapColor = System.Drawing.Color.White;
+            this.aGauge3.CapColors = new System.Drawing.Color[] {
+        System.Drawing.Color.Black,
+        System.Drawing.Color.White,
+        System.Drawing.Color.White,
+        System.Drawing.Color.Black,
+        System.Drawing.Color.Black};
+            this.aGauge3.CapPosition = new System.Drawing.Point(50, 88);
+            this.aGauge3.CapsPosition = new System.Drawing.Point[] {
+        new System.Drawing.Point(10, 10),
+        new System.Drawing.Point(50, 88),
+        new System.Drawing.Point(10, 10),
+        new System.Drawing.Point(10, 10),
+        new System.Drawing.Point(10, 10)};
+            this.aGauge3.CapsText = new string[] {
+        "",
+        "Speed",
+        "",
+        "",
+        ""};
+            this.aGauge3.CapText = "Speed";
+            this.aGauge3.CausesValidation = false;
+            this.aGauge3.Center = new System.Drawing.Point(70, 80);
+            this.aGauge3.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.aGauge3.Location = new System.Drawing.Point(0, 0);
+            this.aGauge3.Margin = new System.Windows.Forms.Padding(2);
+            this.aGauge3.MaxValue = 60F;
+            this.aGauge3.MinValue = 0F;
+            this.aGauge3.Name = "aGauge3";
+            this.aGauge3.Need_Idx = ((byte)(3));
+            this.aGauge3.NeedleColor1 = AGaugeApp.AGauge.NeedleColorEnum.Gray;
+            this.aGauge3.NeedleColor2 = System.Drawing.Color.DimGray;
+            this.aGauge3.NeedleEnabled = false;
+            this.aGauge3.NeedleRadius = 80;
+            this.aGauge3.NeedlesColor1 = new AGaugeApp.AGauge.NeedleColorEnum[] {
+        AGaugeApp.AGauge.NeedleColorEnum.Red,
+        AGaugeApp.AGauge.NeedleColorEnum.Gray,
+        AGaugeApp.AGauge.NeedleColorEnum.Gray,
+        AGaugeApp.AGauge.NeedleColorEnum.Gray};
+            this.aGauge3.NeedlesColor2 = new System.Drawing.Color[] {
+        System.Drawing.Color.DimGray,
+        System.Drawing.Color.DimGray,
+        System.Drawing.Color.DimGray,
+        System.Drawing.Color.DimGray};
+            this.aGauge3.NeedlesEnabled = new bool[] {
+        true,
+        false,
+        false,
+        false};
+            this.aGauge3.NeedlesRadius = new int[] {
+        50,
+        80,
+        80,
+        80};
+            this.aGauge3.NeedlesType = new int[] {
+        0,
+        0,
+        0,
+        0};
+            this.aGauge3.NeedlesWidth = new int[] {
+        2,
+        2,
+        2,
+        2};
+            this.aGauge3.NeedleType = 0;
+            this.aGauge3.NeedleWidth = 2;
+            this.aGauge3.Range_Idx = ((byte)(1));
+            this.aGauge3.RangeColor = System.Drawing.Color.Transparent;
+            this.aGauge3.RangeEnabled = true;
+            this.aGauge3.RangeEndValue = 60F;
+            this.aGauge3.RangeInnerRadius = 51;
+            this.aGauge3.RangeOuterRadius = 60;
+            this.aGauge3.RangesColor = new System.Drawing.Color[] {
+        System.Drawing.Color.Transparent,
+        System.Drawing.Color.Transparent,
+        System.Drawing.SystemColors.Control,
+        System.Drawing.SystemColors.Control,
+        System.Drawing.SystemColors.Control};
+            this.aGauge3.RangesEnabled = new bool[] {
+        true,
+        true,
+        false,
+        false,
+        false};
+            this.aGauge3.RangesEndValue = new float[] {
+        60F,
+        60F,
+        0F,
+        0F,
+        0F};
+            this.aGauge3.RangesInnerRadius = new int[] {
+        50,
+        51,
+        70,
+        70,
+        70};
+            this.aGauge3.RangesOuterRadius = new int[] {
+        60,
+        60,
+        80,
+        80,
+        80};
+            this.aGauge3.RangesStartValue = new float[] {
+        0F,
+        50F,
+        0F,
+        0F,
+        0F};
+            this.aGauge3.RangeStartValue = 50F;
+            this.aGauge3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.aGauge3.ScaleLinesInterColor = System.Drawing.Color.White;
+            this.aGauge3.ScaleLinesInterInnerRadius = 50;
+            this.aGauge3.ScaleLinesInterOuterRadius = 60;
+            this.aGauge3.ScaleLinesInterWidth = 1;
+            this.aGauge3.ScaleLinesMajorColor = System.Drawing.Color.White;
+            this.aGauge3.ScaleLinesMajorInnerRadius = 50;
+            this.aGauge3.ScaleLinesMajorOuterRadius = 60;
+            this.aGauge3.ScaleLinesMajorStepValue = 10F;
+            this.aGauge3.ScaleLinesMajorWidth = 2;
+            this.aGauge3.ScaleLinesMinorColor = System.Drawing.Color.White;
+            this.aGauge3.ScaleLinesMinorInnerRadius = 55;
+            this.aGauge3.ScaleLinesMinorNumOf = 9;
+            this.aGauge3.ScaleLinesMinorOuterRadius = 60;
+            this.aGauge3.ScaleLinesMinorWidth = 1;
+            this.aGauge3.ScaleNumbersColor = System.Drawing.Color.White;
+            this.aGauge3.ScaleNumbersFormat = "0";
+            this.aGauge3.ScaleNumbersRadius = 40;
+            this.aGauge3.ScaleNumbersRotation = 0;
+            this.aGauge3.ScaleNumbersStartScaleLine = 0;
+            this.aGauge3.ScaleNumbersStepScaleLines = 1;
+            this.aGauge3.Size = new System.Drawing.Size(180, 180);
+            this.aGauge3.TabIndex = 9;
+            this.aGauge3.Value = 0F;
+            this.aGauge3.Value0 = 10F;
+            this.aGauge3.Value1 = 4F;
+            this.aGauge3.Value2 = 0F;
+            this.aGauge3.Value3 = 0F;
+            // 
             // aGauge1
             // 
             this.aGauge1.BackColor = System.Drawing.Color.Transparent;
@@ -552,162 +702,14 @@
             this.hsi1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("hsi1.BackgroundImage")));
             this.hsi1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.hsi1.Font = new System.Drawing.Font("微软雅黑", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.hsi1.Heading = 0;
+            this.hsi1.Heading = 90;
             this.hsi1.Location = new System.Drawing.Point(691, 0);
             this.hsi1.Margin = new System.Windows.Forms.Padding(4);
             this.hsi1.Name = "hsi1";
             this.hsi1.NavHeading = 0;
             this.hsi1.Size = new System.Drawing.Size(180, 180);
             this.hsi1.TabIndex = 3;
-            this.hsi1.Load += new System.EventHandler(this.hsi1_Load);
-            // 
-            // aGauge3
-            // 
-            this.aGauge3.BackColor = System.Drawing.Color.Transparent;
-            this.aGauge3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.aGauge3.BaseArcColor = System.Drawing.Color.White;
-            this.aGauge3.BaseArcRadius = 60;
-            this.aGauge3.BaseArcStart = 135;
-            this.aGauge3.BaseArcSweep = 270;
-            this.aGauge3.BaseArcWidth = 2;
-            this.aGauge3.Cap_Idx = ((byte)(1));
-            this.aGauge3.CapColor = System.Drawing.Color.White;
-            this.aGauge3.CapColors = new System.Drawing.Color[] {
-        System.Drawing.Color.Black,
-        System.Drawing.Color.White,
-        System.Drawing.Color.White,
-        System.Drawing.Color.Black,
-        System.Drawing.Color.Black};
-            this.aGauge3.CapPosition = new System.Drawing.Point(50, 88);
-            this.aGauge3.CapsPosition = new System.Drawing.Point[] {
-        new System.Drawing.Point(10, 10),
-        new System.Drawing.Point(50, 88),
-        new System.Drawing.Point(10, 10),
-        new System.Drawing.Point(10, 10),
-        new System.Drawing.Point(10, 10)};
-            this.aGauge3.CapsText = new string[] {
-        "",
-        "Speed",
-        "",
-        "",
-        ""};
-            this.aGauge3.CapText = "Speed";
-            this.aGauge3.CausesValidation = false;
-            this.aGauge3.Center = new System.Drawing.Point(70, 80);
-            this.aGauge3.Font = new System.Drawing.Font("微软雅黑", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.aGauge3.Location = new System.Drawing.Point(-2, 0);
-            this.aGauge3.Margin = new System.Windows.Forms.Padding(2);
-            this.aGauge3.MaxValue = 60F;
-            this.aGauge3.MinValue = 0F;
-            this.aGauge3.Name = "aGauge3";
-            this.aGauge3.Need_Idx = ((byte)(3));
-            this.aGauge3.NeedleColor1 = AGaugeApp.AGauge.NeedleColorEnum.Gray;
-            this.aGauge3.NeedleColor2 = System.Drawing.Color.DimGray;
-            this.aGauge3.NeedleEnabled = false;
-            this.aGauge3.NeedleRadius = 80;
-            this.aGauge3.NeedlesColor1 = new AGaugeApp.AGauge.NeedleColorEnum[] {
-        AGaugeApp.AGauge.NeedleColorEnum.Red,
-        AGaugeApp.AGauge.NeedleColorEnum.Gray,
-        AGaugeApp.AGauge.NeedleColorEnum.Gray,
-        AGaugeApp.AGauge.NeedleColorEnum.Gray};
-            this.aGauge3.NeedlesColor2 = new System.Drawing.Color[] {
-        System.Drawing.Color.DimGray,
-        System.Drawing.Color.DimGray,
-        System.Drawing.Color.DimGray,
-        System.Drawing.Color.DimGray};
-            this.aGauge3.NeedlesEnabled = new bool[] {
-        true,
-        false,
-        false,
-        false};
-            this.aGauge3.NeedlesRadius = new int[] {
-        50,
-        80,
-        80,
-        80};
-            this.aGauge3.NeedlesType = new int[] {
-        0,
-        0,
-        0,
-        0};
-            this.aGauge3.NeedlesWidth = new int[] {
-        2,
-        2,
-        2,
-        2};
-            this.aGauge3.NeedleType = 0;
-            this.aGauge3.NeedleWidth = 2;
-            this.aGauge3.Range_Idx = ((byte)(1));
-            this.aGauge3.RangeColor = System.Drawing.Color.Transparent;
-            this.aGauge3.RangeEnabled = true;
-            this.aGauge3.RangeEndValue = 60F;
-            this.aGauge3.RangeInnerRadius = 51;
-            this.aGauge3.RangeOuterRadius = 60;
-            this.aGauge3.RangesColor = new System.Drawing.Color[] {
-        System.Drawing.Color.Transparent,
-        System.Drawing.Color.Transparent,
-        System.Drawing.SystemColors.Control,
-        System.Drawing.SystemColors.Control,
-        System.Drawing.SystemColors.Control};
-            this.aGauge3.RangesEnabled = new bool[] {
-        true,
-        true,
-        false,
-        false,
-        false};
-            this.aGauge3.RangesEndValue = new float[] {
-        60F,
-        60F,
-        0F,
-        0F,
-        0F};
-            this.aGauge3.RangesInnerRadius = new int[] {
-        50,
-        51,
-        70,
-        70,
-        70};
-            this.aGauge3.RangesOuterRadius = new int[] {
-        60,
-        60,
-        80,
-        80,
-        80};
-            this.aGauge3.RangesStartValue = new float[] {
-        0F,
-        50F,
-        0F,
-        0F,
-        0F};
-            this.aGauge3.RangeStartValue = 50F;
-            this.aGauge3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.aGauge3.ScaleLinesInterColor = System.Drawing.Color.White;
-            this.aGauge3.ScaleLinesInterInnerRadius = 50;
-            this.aGauge3.ScaleLinesInterOuterRadius = 60;
-            this.aGauge3.ScaleLinesInterWidth = 1;
-            this.aGauge3.ScaleLinesMajorColor = System.Drawing.Color.White;
-            this.aGauge3.ScaleLinesMajorInnerRadius = 50;
-            this.aGauge3.ScaleLinesMajorOuterRadius = 60;
-            this.aGauge3.ScaleLinesMajorStepValue = 10F;
-            this.aGauge3.ScaleLinesMajorWidth = 2;
-            this.aGauge3.ScaleLinesMinorColor = System.Drawing.Color.White;
-            this.aGauge3.ScaleLinesMinorInnerRadius = 55;
-            this.aGauge3.ScaleLinesMinorNumOf = 9;
-            this.aGauge3.ScaleLinesMinorOuterRadius = 60;
-            this.aGauge3.ScaleLinesMinorWidth = 1;
-            this.aGauge3.ScaleNumbersColor = System.Drawing.Color.White;
-            this.aGauge3.ScaleNumbersFormat = "0";
-            this.aGauge3.ScaleNumbersRadius = 40;
-            this.aGauge3.ScaleNumbersRotation = 0;
-            this.aGauge3.ScaleNumbersStartScaleLine = 0;
-            this.aGauge3.ScaleNumbersStepScaleLines = 1;
-            this.aGauge3.Size = new System.Drawing.Size(180, 180);
-            this.aGauge3.TabIndex = 9;
-            this.aGauge3.Value = 0F;
-            this.aGauge3.Value0 = 10F;
-            this.aGauge3.Value1 = 4F;
-            this.aGauge3.Value2 = 0F;
-            this.aGauge3.Value3 = 0F;
+            this.hsi1.Load += new System.EventHandler(this.Hsi1_Load);
             // 
             // aGauge4
             // 
@@ -868,7 +870,7 @@
             this.tabPage2.Size = new System.Drawing.Size(867, 176);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "状态";
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            this.tabPage2.Click += new System.EventHandler(this.TabPage2_Click);
             // 
             // textBox1
             // 
@@ -888,7 +890,7 @@
             this.btnOpenCom.TabIndex = 2;
             this.btnOpenCom.Text = "打开串口";
             this.btnOpenCom.UseVisualStyleBackColor = false;
-            this.btnOpenCom.Click += new System.EventHandler(this.btnOpenCom_Click);
+            this.btnOpenCom.Click += new System.EventHandler(this.BtnOpenCom_Click);
             // 
             // cbxBaudRate
             // 
@@ -915,7 +917,7 @@
             this.cbxBaudRate.Size = new System.Drawing.Size(121, 28);
             this.cbxBaudRate.TabIndex = 1;
             this.cbxBaudRate.Text = "115200";
-            this.cbxBaudRate.SelectedIndexChanged += new System.EventHandler(this.cbxBaudRate_SelectedIndexChanged);
+            this.cbxBaudRate.SelectedIndexChanged += new System.EventHandler(this.CbxBaudRate_SelectedIndexChanged);
             // 
             // cbxCOMPort
             // 
@@ -958,6 +960,7 @@
             this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.Size = new System.Drawing.Size(726, 467);
             this.zedGraphControl1.TabIndex = 0;
+            this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
             // TabPageSetting
             // 
@@ -993,7 +996,7 @@
             // 
             // serialPort1
             // 
-            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.serialPort1_DataReceived);
+            this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort1_DataReceived);
             // 
             // FrmMain
             // 
@@ -1034,7 +1037,6 @@
         private MissionPlanner.Controls.QuickView quickView3;
         private MissionPlanner.Controls.QuickView quickView2;
         private MissionPlanner.Controls.QuickView quickView1;
-        private AGaugeApp.AGauge aGauge3;
         private AGaugeApp.AGauge aGauge4;
         private ZedGraph.ZedGraphControl zedGraphControl1;
         private System.Windows.Forms.Panel panel3;
@@ -1055,6 +1057,7 @@
         private System.Windows.Forms.ComboBox cbxCOMPort;
         private System.Windows.Forms.TextBox textBox1;
         private System.IO.Ports.SerialPort serialPort1;
+        private AGaugeApp.AGauge aGauge3;
     }
 }
 
