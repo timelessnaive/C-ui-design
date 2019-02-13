@@ -226,6 +226,13 @@ namespace AUV_Monitor
             //
         }
         
+        //数据显示标签页中图表加载时的事件
+        private void zedGraphControl1_Load(object sender, EventArgs e)
+        {
+            //mypane.CurveList.Clear();
+            //zedGraphControl1.Invalidate();
+            //zedGraphControl1.AxisChange
+        }
 
         //003 单击实时监测-状态标签页的事件
         //行为：刷新界面
