@@ -32,7 +32,7 @@ namespace AUV_Monitor
 
         //public List<double> list_x,list_y;
 
-        PointPairList plist = new PointPairList();
+        PointPairList plist = new PointPairList();//建一个空的坐标点列表
 
         Random random = new Random();
 
@@ -45,19 +45,20 @@ namespace AUV_Monitor
             InitializeComponent();
         }
 
-        // 测试用，点击状态标签可以看到数字在变化，数据显示标签页中有图形被绘制出来。
-        private void TabControl1_Click(object sender, EventArgs e)
+        // 测试用，点击测试按钮可以看到数字在变化，数据显示标签页中有图形被绘制出来。
+        private void  button1_Click(object sender, EventArgs e)
         {
             
             //quickView2.number ++;
             count += 1;
 
-            
-            plist.Add(count, count * random.Next(1,20));
-            GraphPane mypane = zedGraphControl1.GraphPane; //绘制图形
-            mypane.CurveList.Clear();
-            LineItem mycurve = mypane.AddCurve("11", plist, Color.Black, SymbolType.None);
-            
+            int x = count;
+            int y = count * random.Next(0, 10);
+            plist.Add(x, y);//将新的点加入列表
+            GraphPane mypane = zedGraphControl1.GraphPane; //创建图形对象
+            mypane.CurveList.Clear();//清空图中原有的线
+            LineItem mycurve = mypane.AddCurve("11", plist, Color.Black, SymbolType.None);//绘制图形
+
             //zedGraphControl1.Invalidate();
 
 
@@ -177,6 +178,9 @@ namespace AUV_Monitor
                 this.Invoke((EventHandler)(delegate
                 {
                     str_receice_data = Encoding.Default.GetString(receivedData);
+                    textBox1.Text = str_receice_data;
+                    /*
+                    str_receice_data = Encoding.Default.GetString(receivedData);
                     x_value = Convert.ToSingle(str_receice_data.Split(',')[0]);
                     y_value = Convert.ToSingle(str_receice_data.Split(',')[1]);
                     z_value = Convert.ToSingle(str_receice_data.Split(',')[2]);
@@ -226,13 +230,6 @@ namespace AUV_Monitor
             //
         }
         
-        //数据显示标签页中图表加载时的事件
-        private void zedGraphControl1_Load(object sender, EventArgs e)
-        {
-            //mypane.CurveList.Clear();
-            //zedGraphControl1.Invalidate();
-            //zedGraphControl1.AxisChange
-        }
 
         //003 单击实时监测-状态标签页的事件
         //行为：刷新界面

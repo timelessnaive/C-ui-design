@@ -39,8 +39,6 @@
             this.quickView2 = new MissionPlanner.Controls.QuickView();
             this.quickView3 = new MissionPlanner.Controls.QuickView();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
-            this.userControl12 = new AUV_Monitor.UserControl1();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -50,6 +48,7 @@
             this.hsi1 = new MissionPlanner.Controls.HSI();
             this.aGauge4 = new AGaugeApp.AGauge();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnOpenCom = new System.Windows.Forms.Button();
             this.cbxBaudRate = new System.Windows.Forms.ComboBox();
@@ -59,6 +58,8 @@
             this.TabPageSetting = new CCWin.SkinControl.SkinTabPage();
             this.TabPageInfo = new CCWin.SkinControl.SkinTabPage();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.elementHost2 = new System.Windows.Forms.Integration.ElementHost();
+            this.userControl12 = new AUV_Monitor.UserControl1();
             this.TabMain.SuspendLayout();
             this.TabPageIndex.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -98,7 +99,7 @@
             this.TabMain.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Bottom;
             this.TabMain.PageNorml = null;
             this.TabMain.PageNormlTxtColor = System.Drawing.Color.White;
-            this.TabMain.SelectedIndex = 1;
+            this.TabMain.SelectedIndex = 0;
             this.TabMain.Size = new System.Drawing.Size(892, 702);
             this.TabMain.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabMain.TabIndex = 0;
@@ -210,16 +211,6 @@
             this.panel2.Size = new System.Drawing.Size(568, 384);
             this.panel2.TabIndex = 12;
             // 
-            // elementHost2
-            // 
-            this.elementHost2.BackColor = System.Drawing.Color.Black;
-            this.elementHost2.Location = new System.Drawing.Point(-2, 0);
-            this.elementHost2.Name = "elementHost2";
-            this.elementHost2.Size = new System.Drawing.Size(561, 377);
-            this.elementHost2.TabIndex = 0;
-            this.elementHost2.Text = "elementHost2";
-            this.elementHost2.Child = this.userControl12;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -239,7 +230,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(875, 209);
             this.tabControl1.TabIndex = 0;
-            this.tabControl1.Click += new System.EventHandler(this.TabControl1_Click);
             // 
             // tabPage1
             // 
@@ -860,6 +850,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.Black;
+            this.tabPage2.Controls.Add(this.button1);
             this.tabPage2.Controls.Add(this.textBox1);
             this.tabPage2.Controls.Add(this.btnOpenCom);
             this.tabPage2.Controls.Add(this.cbxBaudRate);
@@ -871,6 +862,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "状态";
             this.tabPage2.Click += new System.EventHandler(this.TabPage2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(740, 60);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 37);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "测试";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox1
             // 
@@ -960,7 +963,6 @@
             this.zedGraphControl1.ScrollMinY2 = 0D;
             this.zedGraphControl1.Size = new System.Drawing.Size(726, 467);
             this.zedGraphControl1.TabIndex = 0;
-            this.zedGraphControl1.Load += new System.EventHandler(this.zedGraphControl1_Load);
             // 
             // TabPageSetting
             // 
@@ -997,6 +999,16 @@
             // serialPort1
             // 
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort1_DataReceived);
+            // 
+            // elementHost2
+            // 
+            this.elementHost2.BackColor = System.Drawing.Color.Black;
+            this.elementHost2.Location = new System.Drawing.Point(-2, 0);
+            this.elementHost2.Name = "elementHost2";
+            this.elementHost2.Size = new System.Drawing.Size(561, 377);
+            this.elementHost2.TabIndex = 0;
+            this.elementHost2.Text = "elementHost2";
+            this.elementHost2.Child = this.userControl12;
             // 
             // FrmMain
             // 
@@ -1058,6 +1070,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.IO.Ports.SerialPort serialPort1;
         private AGaugeApp.AGauge aGauge3;
+        private System.Windows.Forms.Button button1;
     }
 }
 
